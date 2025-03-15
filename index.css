@@ -1,0 +1,211 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inder&family=Margarine&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Satisfy&display=swap');
+:root{
+ /* ================font family================ */
+    --ff-perimary:"Roboto", sans-serif;
+    --ff-scondery:"Inder", sans-serif;
+    --ff-desing:"Satisfy", sans-serif;
+    --ff-brand:"Margarine", sans-serif;
+    /*--color*/
+    --clr-white:#fff;
+--clr-secondary:#e9b949;
+--clr-dark:#333;
+--clr-grey-1:#102a42;
+--clr-grey-2: O#617d98;
+--clr-grey-3:#f1f5f8;
+--clr-primary:#f53b57;
+--clr-primary-light:#f04660;
+
+}
+h1,h2,h3,h4{
+    letter-spacing: 0.4rem;
+    text-transform:capitalize ;
+}
+a{
+    text-decoration: none;
+}
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+.navbar{
+    background-color: rgba(26, 23, 23, 0.878);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    font-family: var(--ff-perimary);
+    transform: translateX(-100%);
+    transition: all 0.3s linear;
+}
+#saidmanu:checked ~ .navbar{
+    transform: translateX(0%);
+}
+
+.nav_btn svg{
+    fill: var(--clr-primary-light);
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    cursor: pointer;
+}
+.headnav h1{
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem;
+    text-transform: uppercase;
+    color: transparent;
+    font-weight: 700;
+    background-image: linear-gradient(180deg, var(--clr-primary) 25%,var(--clr-secondary));
+    background-clip: text;
+}
+.headnav img{
+    width: 100px;
+    height: 100px;
+    position:relative;
+    bottom: 85px;
+    right:15px;
+}
+.headnav{
+    position: relative;
+}
+.navclose{
+    position: absolute;
+    right: 0%;
+    top: 5px;
+    padding: 15px;
+}
+.navclose svg{
+  cursor: pointer;
+  fill: var(--clr-primary-light);
+  transition: all 0.3s linear;
+
+}
+.navclose:hover svg{
+    fill:  var(--clr-grey-3);  
+}
+.naviteam li a{
+    display: block;
+    color: var(--clr-white);
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    padding: 0.7rem 1rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s linear;
+}
+.naviteam li a:hover{
+    background-color: var(--clr-primary-light);
+    padding-left: 1.5rem;
+} 
+.naviteam{
+    list-style-type: none;
+}
+
+@media screen and (min-width: 768px){
+    .navbar{
+        width: 35%;
+        max-width: 25rem;
+    }
+    
+}
+.header{
+    min-height: 100vh;
+    background: linear-gradient(rgba(122, 113, 106, 0.301),rgba(0, 0, 0, 0.058)), url(./images/407194\ \(1\).jpg) center/cover no-repeat fixed;
+}
+
+
+.banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 10px;
+
+}
+.banner h1{ 
+    font-family: var(--ff-desing);
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(180deg, var(--clr-primary) 25%,var(--clr-secondary));
+    padding: 5px;
+    font-size: large;
+
+}
+.banner h2{
+    font-family: var(--ff-brand);
+    font-weight: 400;
+    text-shadow: 2px 5px 5px var(--clr-primary);
+    color: #f1f5f8;
+
+}
+.btn{
+    padding: 0.75rem 0.75rem;
+    background-image: linear-gradient(180deg, var(--clr-primary) 25%,var(--clr-secondary));
+    border-radius: 100px;
+    font-size: 1rem;
+    color: #f1f5f8;
+}
+.btn:hover{
+    outline: 2px solid var(--clr-primary-light);
+    outline-offset: 4px;
+    
+}   
+
+.contend-divider{
+    height: 0.5rem;
+       background-image: linear-gradient(180deg, var(--clr-primary) 30% ,var(--clr-secondary));
+   
+}
+
+/* features-saetion====================== */
+
+.features{
+    background-color: var(--clr-grey-3);
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.feature{
+    min-width: 25%;
+    padding: 2rem 0;
+    text-align: center;
+    transition: all 0.3s linear;
+    flex-grow: 1;
+
+}
+.feature4{
+    flex-grow: 2;
+}
+.feature-icon svg{
+    fill: #333;
+    transition: all 0.3s linear;
+}
+.feature h4{
+    letter-spacing: normal;
+    text-transform: uppercase;
+    padding: 5px;
+}
+.feature p{
+    max-width: 17rem;
+    margin: 0 auto;
+}
+.feature:hover{
+    background-color: var(--clr-white);
+    box-shadow: 0px 2px var(--clr-primary);
+}
+.feature:hover h4{
+    color: var(--clr-primary-light);
+}
+.feature:hover .feature-icon svg{
+    fill: var(--clr-primary-light);
+    transform: translateY(-3px);
+}
+/* end============================== */
+/* about-styles=============== */
+
